@@ -1,6 +1,6 @@
 // Closure, função q se lembra do ambiente em q foi criada
 function armazenarSoma(x){
-    return function(y){ // retorna a função para a variável
+    return function(y){ // retorna a função para a variável soma1
         return x + y;
     }
 }
@@ -9,7 +9,7 @@ let soma1 = armazenarSoma(3); // recebe a function
 console.log(soma1(5)); // executa ela
 let soma2 = armazenarSoma(5);
 console.log(soma2(10));
-
+ 
 // RECURSÃO  ela se auto-invoca
 
 function retornarNumeroPar(n){
@@ -106,7 +106,7 @@ let numeros = [1, 2, 3, 4, 5, 45, 67, 124];
 numeros.push(30,"Anna"); // adiciona elements no fim de um array 
 console.log(numeros);
 
-let nomeRemovido = numeros.pop(); // remove o ultimo elemento
+let nomeRemovido = numeros.pop(); // remove o ultimo elemento e o coloca na variável
 console.log(nomeRemovido);
 
 // unshift shift é o contrário, adiciona e remove no primeiro elemento
@@ -130,7 +130,6 @@ console.log(numeros.slice(3)); // vai apartir do 4 elemento
 numeros.forEach(num => { // para cada elemento do array faça:
     console.log(num);
 })
-
 
 // includes retorna booleano, achar tal valor no array
 let carros = ["gol \n ", 'mercedes', 'fusca'];
@@ -157,6 +156,7 @@ console.log(milAoContrario.padStart(4,'0')); // repetir a string no início 4 ve
 
 let firstSplit = 'dgdf gdfg dfgdfg df';
 let resultado = firstSplit.split(' ');
+console.log(resultado);
 
 console.log(resultado.join(' ')); // é o contrário de split, vai unir os element do array com ' ' no meio, fazendo uma string
 
@@ -217,7 +217,7 @@ console.log(Object.keys(person));
 
 
 // EXERCÍCIO
-
+ 
 let calculadora = {
     somar : function (n1,n2) {  // somar é um método
         console.log(n1+n2);

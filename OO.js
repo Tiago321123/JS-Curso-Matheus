@@ -8,7 +8,7 @@ console.log(pessoa.hasOwnProperty("maos")); // método do pai, prototype
 // classes
 let cachorro = {
     raca: 'SRD',
-    }
+}
 let pastorAlemao = Object.create(cachorro);
 pastorAlemao.raca = 'Pastor Alemão';
 console.log(pastorAlemao);
@@ -22,7 +22,6 @@ function criarCachorro(raca) {
 }
 let doberman = criarCachorro('Doberman');
 console.log(doberman.raca);
-
 
 function Cachorro(raca){
     this.raca=raca;
@@ -41,6 +40,7 @@ class Cachorra {
     constructor(raca){
         this.raca = raca;
     }
+    ab = 9;
 } 
 let labrador = new Cachorra('Labrador');
 console.log(labrador.raca);
@@ -55,12 +55,12 @@ class Cachorros{
  latir(){
    console.log("Au au");
  }
-}
+} 
 Cachorros.prototype.patas = 4;
 let poodle = new Cachorros('Poodle');
-console.log(poodle.raca);
+console.log(poodle.raca); 
 console.log(poodle.patas);
+
 Cachorros.prototype.raca = "SRD";
 console.log(poodle.raca);
 console.log(Cachorros.prototype.raca);
-
